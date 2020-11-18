@@ -2,7 +2,15 @@ package com.study.springboota2.member;
 
 public class MemberServiceImpl implements MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    // 클라이언트가 직접 구현체를 의존하고 있음
+    // private final MemberRepository memberRepository = new MemoryMemberRepository();
+
+    private MemberRepository memberRepository;
+
+    // 어떤 멤버레파지토리가 들어갈지는 생성자를 통해서
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public void join(Member member) {
