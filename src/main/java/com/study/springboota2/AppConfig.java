@@ -1,6 +1,9 @@
 package com.study.springboota2;
 
+import com.study.springboota2.discount.DiscountPolicy;
+import com.study.springboota2.discount.FixDiscountPolicy;
 import com.study.springboota2.discount.RateDiscountPolicy;
+import com.study.springboota2.member.MemberRepository;
 import com.study.springboota2.member.MemberService;
 import com.study.springboota2.member.MemberServiceImpl;
 import com.study.springboota2.member.MemoryMemberRepository;
@@ -11,11 +14,20 @@ import com.study.springboota2.order.OrderServiceImpl;
 public class AppConfig {
 
     public MemberService memberService() {
-        return new MemberServiceImpl(new MemoryMemberRepository());
+        return new MemberServiceImpl(MemberRepository());
+    }
+
+    private MemberRepository MemberRepository() {
+        return new MemoryMemberRepository();
     }
 
     public OrderService orderService() {
-        return new OrderServiceImpl(new MemoryMemberRepository(), new RateDiscountPolicy());
+        return new OrderServiceImpl(MemberRepository(), DiscountPolicy());
     }
+
+    private DiscountPolicy DiscountPolicy() {
+        return new FixDiscountPolicy();
+    }
+
 
 }
