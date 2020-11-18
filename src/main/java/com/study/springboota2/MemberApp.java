@@ -3,7 +3,6 @@ package com.study.springboota2;
 import com.study.springboota2.member.Grade;
 import com.study.springboota2.member.Member;
 import com.study.springboota2.member.MemberService;
-import com.study.springboota2.member.MemberServiceImpl;
 
 public class MemberApp {
     public static void main(String[] args) {

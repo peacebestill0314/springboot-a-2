@@ -3,10 +3,8 @@ package com.study.springboota2;
 import com.study.springboota2.member.Grade;
 import com.study.springboota2.member.Member;
 import com.study.springboota2.member.MemberService;
-import com.study.springboota2.member.MemberServiceImpl;
 import com.study.springboota2.order.Order;
 import com.study.springboota2.order.OrderService;
-import com.study.springboota2.order.OrderServiceImpl;
 
 public class OrderApp {
     public static void main(String[] args) {
