@@ -4,7 +4,6 @@ import com.study.springboota2.AppConfig;
 import com.study.springboota2.member.Grade;
 import com.study.springboota2.member.Member;
 import com.study.springboota2.member.MemberService;
-import com.study.springboota2.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,10 +1,8 @@
 package com.study.springboota2.beanfind;
 
-import com.study.springboota2.AppConfig;
 import com.study.springboota2.discount.DiscountPolicy;
 import com.study.springboota2.discount.FixDiscountPolicy;
 import com.study.springboota2.discount.RateDiscountPolicy;
-import com.study.springboota2.member.MemberRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

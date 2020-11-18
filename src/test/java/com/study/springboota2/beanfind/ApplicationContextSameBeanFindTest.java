@@ -1,7 +1,5 @@
 package com.study.springboota2.beanfind;
 
-import com.study.springboota2.AppConfig;
-import com.study.springboota2.discount.DiscountPolicy;
 import com.study.springboota2.member.MemberRepository;
 import com.study.springboota2.member.MemoryMemberRepository;
 import org.junit.jupiter.api.Assertions;
@@ -14,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Map;
 
-import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ApplicationContextSameBeanFindTest {
@@ -42,7 +39,7 @@ public class ApplicationContextSameBeanFindTest {
         for (String key : beansOfType.keySet()) {
             System.out.println("key = " + key + ", value = " + beansOfType.get(key));
         }
-        System.out.println("beansOfType = " +  beansOfType);
+        System.out.println("beansOfType = " + beansOfType);
         assertThat(beansOfType.size()).isEqualTo(2);
     }
 
@@ -52,6 +49,7 @@ public class ApplicationContextSameBeanFindTest {
         public MemberRepository memberRepository1() {
             return new MemoryMemberRepository();
         }
+
         @Bean
         public MemberRepository memberRepository2() {
             return new MemoryMemberRepository();

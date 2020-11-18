@@ -1,11 +1,8 @@
 package com.study.springboota2.order;
 
 import com.study.springboota2.discount.DiscountPolicy;
-import com.study.springboota2.discount.FixDiscountPolicy;
-import com.study.springboota2.discount.RateDiscountPolicy;
 import com.study.springboota2.member.Member;
 import com.study.springboota2.member.MemberRepository;
-import com.study.springboota2.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService{
 
